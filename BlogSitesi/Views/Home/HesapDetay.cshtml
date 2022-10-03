@@ -1,0 +1,57 @@
+﻿@model BlogSitesi.Models.Blog
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xtra Blog</title>
+    <link rel="stylesheet" href="fontawesome/css/all.min.css"> <!-- https://fontawesome.com/ -->
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet"> <!-- https://fonts.google.com/ -->
+    <link href="~/hesapdetay/css/bootstrap.min.css" rel="stylesheet">
+    <link href="~/hesapdetay/css/templatemo-xtra-blog.css" rel="stylesheet">
+    <!--
+
+    TemplateMo 553 Xtra Blog
+
+    https://templatemo.com/tm-553-xtra-blog
+
+    -->
+</head>
+<body>
+    <header class="tm-header" id="tm-header">
+        <div class="tm-header-wrapper">
+            <button class="navbar-toggler" type="button" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="tm-site-header">
+                <figure class="tm-comment-figure">
+                    <img src="@Url.Content(Model.profilPath)" alt="Image" class="mb-2 rounded-circle img-thumbnail" style="margin-left:65px;">
+                    <figcaption class="tm-color-primary text-center">@Html.DisplayFor(model => model.isim)</figcaption>
+                </figure>
+            </div>
+            <nav class="tm-nav" id="tm-nav">
+                <ul>
+                    <li class="tm-nav-item">
+                        <a href="index.html" class="tm-nav-link">
+                            <i class="fas fa-home"></i>
+                            Blog Home
+                        </a>
+                    </li>
+                    <li class="tm-nav-item active">
+                        <a href="@Url.Action("IcerikYaz", "Home")" class="tm-nav-link">
+                            <i class="fas fa-pen"></i>
+                            Single Post
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/templatemo-script.js"></script>
+</body>
+</html>

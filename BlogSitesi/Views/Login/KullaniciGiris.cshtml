@@ -1,0 +1,51 @@
+﻿@using System.Web.UI.WebControls
+@model BlogSitesi.Models.User
+@{
+    Layout = null;
+    /* if (Session["userID"] == null)
+     {
+         Response.Redirect("~/Login/Index");
+     } */
+}
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Giris</title>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700|Lato:400,100,300,700,900' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="~/logintemp/css/animate.css">
+    <link rel="stylesheet" href="~/logintemp/css/style.css">
+    <!--  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script> -->
+</head>
+
+<body>
+    <div class="container">
+        <div class="login-box animated fadeInUp">
+            <div class="box-header">
+                <h2>Giris Yap</h2>
+            </div>
+            @using (Html.BeginForm("Autherize", "Login", FormMethod.Post))
+            {
+                <table style="margin-left: auto; margin-right: auto">
+                    <label for="username">Kullanici Adi</label>
+                    <h4>@Html.EditorFor(model => model.KullaniciAdi)</h4>
+                    <label for="password">Sifre</label>
+                    <h4>@Html.EditorFor(model => model.Sifre)</h4>
+                    <label style="font-size: 20px; color: white" class="field-validation-error">@Html.DisplayFor(model => model.LoginErrorMessage) </label>
+                    <button type="submit">Giris</button>
+                    <br />
+                    <br />
+                    <a style="color:black; font-size: large" href="@Url.Action("Kayit", "Record")">KAYIT OL</a>
+                </table>
+            }
+
+        </div>
+    </div>
+</body>
+
+
+
+</html>

@@ -1,0 +1,77 @@
+﻿@model BlogSitesi.Models.User
+@{
+    Layout = null;
+}
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Daily UI - Day 1 Sign In</title>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700|Lato:400,100,300,700,900' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="~/logintemp/css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="login-box animated fadeInUp">
+            <div class="box-header">
+                <h2>KAYIT OL</h2>
+            </div>
+            @using (Html.BeginForm("Kayit", "Record", FormMethod.Post, new { enctype = "multipart/form-data" }))
+            {
+                @Html.AntiForgeryToken()
+
+        <div class="form-horizontal">
+
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            <div style="margin-left: auto; margin-right: auto" class="form-group">
+                <div class="col-md-2">
+                    <h5>Kullanici Adi</h5>
+                    @Html.EditorFor(model => model.KullaniciAdi, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.KullaniciAdi, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div style="margin-left: auto; margin-right: auto" class="form-group">
+                <div class="col-md-2">
+                    <h5>Sifre</h5>
+                    @Html.EditorFor(model => model.Sifre, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Sifre, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div style="margin-left: auto; margin-right: auto" class="form-group">
+                <div class="col-md-2">
+                    @Html.EditorFor(model => model.TekrarSifre, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.TekrarSifre, "", new { @class = "text-danger" })
+                </div>
+            </div>
+         <div style="margin-left: auto; margin-right: auto" class="form-group">
+                <div class="col-md-2">
+                    <h4>Profil Resmi</h4>
+                    <input type="file" name="Imagefile" required />
+                </div>
+            </div>  
+            <button type="submit">Giris</button>
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-2">
+                    <label class="label-success">@ViewBag.SuccessMessage</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-2">
+                    <label class="danger-success">@ViewBag.DuplicateMessage</label>
+                </div>
+            </div>
+
+            <br />
+            <a href="@Url.Action("KullaniciGiris", "Login")">Giris yap Sayfasi</a>
+        </div>              
+            }
+        </div>
+    </div>
+</body>
+</html>
+
+

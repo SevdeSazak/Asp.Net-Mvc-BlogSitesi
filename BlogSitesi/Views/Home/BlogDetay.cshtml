@@ -1,0 +1,61 @@
+﻿@model BlogSitesi.Models.Blog
+@{
+    ViewBag.Title = "BlogDetay";
+    Layout = "~/Views/Default/Index1.cshtml";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="150 words">
+    <meta name="author" content="uipasta">
+    <meta name="url" content="http://www.yourdomainname.com">
+    <meta name="copyright" content="company name">
+    <meta name="robots" content="index,follow">
+    <title>DevBlog - Personal Blog Template</title>
+    <link rel="shortcut icon" href="images/favicon/favicon.ico">
+    <link rel="apple-touch-icon" sizes="144x144" type="image/x-icon" href="images/favicon/apple-touch-icon.png">
+    <link rel="stylesheet" type="text/css" href="~/DevBlog - Personal Blog Template/DevBlog/css/plugin.css">
+    <link rel="stylesheet" type="text/css" href="~/DevBlog - Personal Blog Template/DevBlog/css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:400,300,500,600,700">
+    <link rel="stylesheet" type="text/css" href="~/DevBlog - Personal Blog Template/DevBlog/css/syntax/shCore.css">
+    <link rel="stylesheet" type="text/css" href="~/DevBlog - Personal Blog Template/DevBlog/css/syntax/shThemeDefault.css">
+</head>
+<body>
+    <div id="main">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+                    <div class="col-md-12 page-body">
+                        <div class="row">
+                            <div class="col-md-12 content-page">
+                                <div class="col-md-12 blog-post">
+                                    <div class="post-title">
+                                        <h1>@Html.DisplayFor(model => model.Baslik)</h1>
+                                    </div>
+                                    <div class="post-image margin-top-40 margin-bottom-40">
+                                        <img src="@Url.Content(Model.imagePath)" width="250" height="250" />
+                                    </div>
+                                    <br />
+                                    @Html.DisplayFor(model => model.Yazi)
+                                    <div class="post-info" style="margin-left:550px">
+                                        <img style="border-radius: 50%; height: 25px; width: 25px; object-fit: cover" src="@Url.Content(Model.profilPath)" alt="">
+                                        <span><a href="#" target="_blank">@Html.DisplayFor(model => model.isim)</a> / @Html.DisplayFor(model => model.Tarih)</span>
+                                    </div>
+                                    <a href="#" class="scroll-to-top"><i class="fa fa-long-arrow-up"></i></a>
+                                    <script type="text/javascript" src="~/DevBlog - Personal Blog Template/DevBlog/js/jquery.min.js"></script>
+                                    <script type="text/javascript" src="~/DevBlog - Personal Blog Template/DevBlog/js/plugin.js"></script>
+                                    <script type="text/javascript" src="~/DevBlog - Personal Blog Template/DevBlog/js/scripts.js"></script>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

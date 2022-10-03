@@ -1,0 +1,184 @@
+
+body {
+    font-family: "Poppins", sans-serif;
+    background: #fafafa !important;
+}
+	
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+::selection {
+    background-color: #1abc9c;
+    color: #ffffff;
+}
+
+::-moz-selection {
+    background-color: #1abc9c;
+    color: #ffffff;
+}
+
+a {
+    text-decoration: none !important;
+    color: #1abc9c;
+}
+
+
+
+p {
+    font-size: 14px;
+    font-family: "Poppins", sans-serif;
+}
+
+
+
+#main {
+    margin: 50px 0;
+}
+
+.main-color {
+    color: #1abc9c;
+}
+
+.page-body {
+    background: #ffffff;
+    box-shadow: -2px -1px 88px 0px rgba(0,0,0,0.17);
+    margin-left: 150px;
+}
+
+.sub-title {
+    padding: 30px;
+}
+
+.sub-title h2 {
+    display: inline-block;
+    font-size: 25px;
+    letter-spacing: 0.5px;
+    font-weight: 600;
+
+}
+
+.sub-title i {
+    float: right;
+    font-size: 35px;
+    margin-top: 15px;
+}
+
+
+.content-page {
+    padding-top: 30px;
+    padding-bottom: 60px;
+    border-top: 1px dashed #dedede;
+    border-bottom: 1px dashed #dedede;
+}
+
+/* Blog Post & Single Blog Page */
+
+div.blog-post {
+    display: none;
+    margin-bottom: 50px;
+}
+
+.blog-post .post-image img {
+    width: 100%;
+}
+
+.blog-post .post-image p {
+    text-align: center;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.blog-post .post-image a {
+    font-weight: 600;
+}
+
+.blog-post .post-title h1 {
+    color: #333333;
+    font-size: 35px;
+    line-height: 45px;
+    font-weight: 700;
+    margin-top: 24px;
+}
+
+.blog-post .post-title h2 {
+    font-size: 25px;
+    line-height: 35px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.blog-post .post-info {
+    font-size: 14px;
+    line-height: 30px;
+    font-weight: 500;
+    padding: 10px 0;
+    color: #8c8c8c;
+}
+
+.blog-post p {
+    font-size: 16px;
+    line-height: 30px;
+    color: #696868;
+    font-weight: 300;
+    letter-spacing: 0.8px;
+    font-family: "Poppins", sans-serif;
+}
+
+/* End Box (Popup When Scroll Down) */
+
+.endpage-box {
+    position: fixed;
+    bottom: 10px;
+    right: 0px;
+    left: 61px;
+    background: #ffffff;
+    width: 263px;
+    padding: 25px;
+    box-shadow: -2px -1px 88px 0px rgba(0,0,0,0.17);
+   -webkit-box-shadow: -2px -1px 88px 0px rgba(0,0,0,0.17);
+    
+}
+
+.endpage-box h4 {
+    color: #333333;
+    font-weight: 600;
+}
+
+.endpage-box a {
+    color: #333333;
+}
+
+.endpage-box a:hover {
+    color: #1abc9c;
+}
+
+#endpage-box {
+    display: none !important;
+}
+
+/* Scroll To Top */
+.scroll-to-top {
+    display: none;
+    font-size: 40px;
+    color: #1abc9c;
+    position: fixed;
+    right: 20px;
+    bottom: 50px;
+    z-index: 999;
+    transition: all 0.3s ease-in-out;
+}
+
+.scroll-to-top:hover,
+.scroll-to-top:focus {
+    color: #333333;
+}
+
+/* Margin Top */
+.margin-top-40 {
+	margin-top: 40px !important;
+}
+
+
+
